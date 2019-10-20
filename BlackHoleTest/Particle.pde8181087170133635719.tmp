@@ -37,19 +37,17 @@ class Particle {
   }
 
   void display() {
-    //mapColor(cur_force);
-    fill(255,0,0);
-    ellipse(position.x, position.y, 3, 3);  // size 3 is good.
+    mapColor(cur_force);
+    ellipse(position.x, position.y, 10, 10);  // size 3 is good.
         
   }
   
-  // Map the colours of the particles depending on the foce experienced by them.
   void mapColor(PVector force){
-    
     float mag = sqrt(pow(force.x, 2) + pow(force.y, 2));
     noStroke();
-    int col = int(map(mag, 0, 255, pow(10,-1), pow(10,-6)));
-    println(mag, col);
-    fill(col, 0,0);
+    colorMode(HSB, 100);
+    //int col = int(map(mag, 0, 100, pow(10,-8), 100));
+    fill(50);
+    colorMode(RGB, 100);
   }
 }

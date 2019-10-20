@@ -32,11 +32,11 @@ class Blackhole {
   void display() {
     ellipseMode(CENTER);
     strokeWeight(1);
-    stroke(0);
+    stroke(50, 255,255);
     ellipse(position.x, position.y, 2, 2);
 
     float er = (2 * G * mass) / (c * c);
-    println(er);
+    //println(er);
     noFill();
     stroke(0);
     ellipse(position.x, position.y, er * 2, er * 2);
